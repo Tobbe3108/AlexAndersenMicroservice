@@ -1,6 +1,23 @@
-using Delivery.Microservice.Interfaces;
-using Delivery.Microservice.Services;
+namespace Delivery.Microservice;
 
+public class Program
+{
+  public static void Main(string[] args)
+  {
+    var host = CreateHostBuilder(args).Build();
+
+    host.Run();
+  }
+
+  public static IHostBuilder CreateHostBuilder(string[] args) =>
+      Host.CreateDefaultBuilder(args)
+          .ConfigureWebHostDefaults(webBuilder =>
+          {
+            webBuilder.UseStartup<Startup>();
+          });
+}
+
+/*
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,3 +45,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+*/
