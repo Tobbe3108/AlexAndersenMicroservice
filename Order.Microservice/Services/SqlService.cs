@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Order.Microservice.Interfaces
+namespace Order.Microservice.Services
 {
-    public interface IOrderService
+    public class SqlService
     {
     }
 }

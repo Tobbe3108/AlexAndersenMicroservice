@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.Microservice.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Microservice", "Order.Microservice\Order.Microservice.csproj", "{01D52A04-C463-4441-B67D-60C4EF327D08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Microservice.Tests.Unit", "Order.Microservice.Tests.Unit\Order.Microservice.Tests.Unit.csproj", "{2FE89183-2C93-448F-811D-0E4CAF8EEC15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{01D52A04-C463-4441-B67D-60C4EF327D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D52A04-C463-4441-B67D-60C4EF327D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01D52A04-C463-4441-B67D-60C4EF327D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE89183-2C93-448F-811D-0E4CAF8EEC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE89183-2C93-448F-811D-0E4CAF8EEC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE89183-2C93-448F-811D-0E4CAF8EEC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE89183-2C93-448F-811D-0E4CAF8EEC15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{D197CC52-42D6-43D5-B425-4D7D494C83AD} = {1BAF7482-5950-4564-8189-853FAEDCEAFD}
 		{60A6CCC5-F16F-491F-8EE6-D0ACEC0834ED} = {2FC58C1F-31D0-42EA-AB9D-6FF79A613E4D}
 		{01D52A04-C463-4441-B67D-60C4EF327D08} = {1BAF7482-5950-4564-8189-853FAEDCEAFD}
+		{2FE89183-2C93-448F-811D-0E4CAF8EEC15} = {2FC58C1F-31D0-42EA-AB9D-6FF79A613E4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70A6AC8D-E408-4228-976D-DDC03E9CEACD}

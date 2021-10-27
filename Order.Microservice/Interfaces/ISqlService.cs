@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Order.Microservice.Interfaces
 {
-    public interface IOrderService
+    public interface ISqlService
     {
     }
 }
