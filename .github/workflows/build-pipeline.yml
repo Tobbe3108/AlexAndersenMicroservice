@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  REGISTRY: ghcr.io/${{ lowercase(github.repository_owner) }}/${{ lowercase(github.event.repository.name)}}
+  REGISTRY: ghcr.io/tobbe3108/alexandersenmicroservice
   IMAGE_NAME: Order.Microservice
 
 
