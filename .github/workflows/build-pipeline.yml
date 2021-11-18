@@ -10,7 +10,7 @@ on:
 env:
   REGISTRY: ghcr.io/tobbe3108/alexandersenmicroservice
   #${{ github.repository_owner }}/${{ github.event.repository.name}}
-  IMAGE_NAME: Order.Microservice
+  IMAGE_NAME: order.microservice
 
 
 jobs:
