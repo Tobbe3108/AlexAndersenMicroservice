@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name}}
-  IMAGE_NAME: myapi
+  IMAGE_NAME: Order.Microservice
 
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
           
       - name: Build Image
         run: |
-          docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest -f MyApi/Dockerfile .
+          docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest -f Order.Microservice/Dockerfile .
       - name: Push Image
         if: github.event_name != 'pull_request'
         run: |
