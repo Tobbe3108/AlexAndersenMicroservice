@@ -8,13 +8,17 @@
 
     <ItemGroup>
         <PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />
-        <PackageReference Include="FluentAssertions" Version="6.2.0" />
-        <PackageReference Include="Moq" Version="4.16.1" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="4.0.0"/>
+        <PackageReference Include="RepoDb" Version="1.12.9"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
     </ItemGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="Delivery.Microservice.Tests.Unit" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
 </Project>

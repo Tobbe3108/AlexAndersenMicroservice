@@ -1,12 +1,14 @@
+using Microsoft.Data.SqlClient;
+using Shared.Database;
+using RepoDb;
+
 namespace Delivery.Microservice.Services;
 
-using Interfaces;
-using  Models;
-
-internal class SqlService : ISqlService
+internal class SqlService<T> : IGetById<T> where T : class?
 {
-  public Task<Delivery?> GetById(string? packageId)
+  private readonly SqlConnection _sqlConnection;
+  public async Task<T?> GetById(object id)
   {
-    return Task.FromResult(new Delivery("HTJMD7556GH"))!;
+    return (await _sqlConnection.QueryAsync<T>(id)).FirstOrDefault();
   }
 }

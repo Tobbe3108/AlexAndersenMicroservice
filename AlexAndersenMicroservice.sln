@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Microservice.Tests.Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.Microservice.Tests.Load", "tests\Delivery.Microservice.Tests.Load\Delivery.Microservice.Tests.Load.csproj", "{4C7F2FE3-BE9C-4982-B70C-7C086348B0E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Shared\Shared.csproj", "{92297FC6-B29E-44DE-93A6-F13EECD79214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{4C7F2FE3-BE9C-4982-B70C-7C086348B0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C7F2FE3-BE9C-4982-B70C-7C086348B0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C7F2FE3-BE9C-4982-B70C-7C086348B0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92297FC6-B29E-44DE-93A6-F13EECD79214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92297FC6-B29E-44DE-93A6-F13EECD79214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92297FC6-B29E-44DE-93A6-F13EECD79214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92297FC6-B29E-44DE-93A6-F13EECD79214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{01D52A04-C463-4441-B67D-60C4EF327D08} = {1BAF7482-5950-4564-8189-853FAEDCEAFD}
 		{2FE89183-2C93-448F-811D-0E4CAF8EEC15} = {2FC58C1F-31D0-42EA-AB9D-6FF79A613E4D}
 		{4C7F2FE3-BE9C-4982-B70C-7C086348B0E1} = {2FC58C1F-31D0-42EA-AB9D-6FF79A613E4D}
+		{92297FC6-B29E-44DE-93A6-F13EECD79214} = {1BAF7482-5950-4564-8189-853FAEDCEAFD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70A6AC8D-E408-4228-976D-DDC03E9CEACD}

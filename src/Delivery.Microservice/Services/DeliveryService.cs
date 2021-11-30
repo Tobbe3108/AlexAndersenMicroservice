@@ -6,9 +6,9 @@ using Models;
 
 internal class DeliveryService : IDeliveryService
 {
-  private readonly ISqlService _sqlService;
+  private readonly SqlService<Delivery> _sqlService;
 
-  public DeliveryService(ISqlService sqlService)
+  public DeliveryService(SqlService<Delivery> sqlService)
   {
     _sqlService = sqlService;
   }

@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddTransient<IDeliveryService, DeliveryService>();
-builder.Services.AddTransient<ISqlService, SqlService>();
+builder.Services.AddSingleton(new SqlService<Delivery.Microservice.Models.Delivery>());
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

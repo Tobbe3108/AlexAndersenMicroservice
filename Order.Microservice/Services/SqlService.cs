@@ -1,24 +1,26 @@
-﻿using Order.Microservice.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.Data.SqlClient;
+using RepoDb;
+using Shared.Database;
 
 namespace Order.Microservice.Services
 {
-    public class SqlService : ISqlService
+    public class SqlService<T> : IGetById<T>, ICreate<T>, IUpdate<T> where T : class?
     {
-        public async Task<Models.Order> CreateOrder(Models.Order order)
+        private readonly SqlConnection _sqlConnection;
+        public async Task<T?> GetById(object id)
         {
-            return new Models.Order { OrderId = 1, CreatedDate = DateTime.Now, CustomerId = 1, DeliveryAddress = "Boulevard", OrderNo = "1" };
+            return (await _sqlConnection.QueryAsync<T>(id)).FirstOrDefault();
         }
-        public async Task<Models.Order> GetOrder(int? orderId)
+
+        public async Task<T> Create(T model)
         {
-            return new Models.Order { OrderId = 1, CreatedDate = DateTime.Now, CustomerId = 1, DeliveryAddress = "Boulevard", OrderNo = "1" };
+            return (T)await _sqlConnection.InsertAsync(model);
         }
-        public async Task<Models.Order> UpdateOrder(Models.Order order)
+
+        public async Task<T> Update(T model)
         {
-            return new Models.Order { OrderId = 1, CreatedDate = DateTime.Now, CustomerId = 1, DeliveryAddress = "Updated", OrderNo = "1" };
+            await _sqlConnection.UpdateAsync(model);
+            return model;
         }
     }
 }

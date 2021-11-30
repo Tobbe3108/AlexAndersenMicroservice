@@ -1,18 +1,6 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Order.Microservice.Interfaces;
 using Order.Microservice.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Order.Microservice
 {
@@ -29,7 +17,7 @@ namespace Order.Microservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IOrderService, OrderService>();
-            services.AddTransient<ISqlService, SqlService>();
+            services.AddSingleton(new SqlService<Models.Order>());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

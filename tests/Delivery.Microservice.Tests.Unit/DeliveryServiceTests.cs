@@ -4,6 +4,7 @@ using Delivery.Microservice.Interfaces;
 using Delivery.Microservice.Services;
 using FluentAssertions;
 using Moq;
+using Shared;
 using Xunit;
 
 namespace Delivery.Microservice.Tests.Unit;
@@ -11,7 +12,7 @@ namespace Delivery.Microservice.Tests.Unit;
 public class DeliveryServiceTests
 {
   private readonly DeliveryService _sut;
-  private readonly Mock<ISqlService> _sqlService = new();
+  private readonly Mock<SqlService<Models.Delivery>> _sqlService = new();
 
   public DeliveryServiceTests()
   {

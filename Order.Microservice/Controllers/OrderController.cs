@@ -22,7 +22,7 @@ namespace Order.Microservice.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrder([FromBody] Models.Order order)
+        public async Task<IActionResult> CreateOrder([FromBody] Models.Order? order)
         {
             var createdOrder = await _orderService.CreateOrder(order);
 
@@ -37,7 +37,7 @@ namespace Order.Microservice.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetOrder(int? orderId)
+        public async Task<IActionResult> GetOrder(int orderId)
         {
             var orderFound = await _orderService.GetOrder(orderId);
 
@@ -52,7 +52,7 @@ namespace Order.Microservice.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateOrder([FromBody] Models.Order order)
+        public async Task<IActionResult> UpdateOrder([FromBody] Models.Order? order)
         {
             var updatedOrder = await _orderService.UpdateOrder(order);
 
