@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Order.Microservice\Order.Microservice.csproj" />
+    <ProjectReference Include="..\..\src\Order.Microservice\Order.Microservice.csproj" />
   </ItemGroup>
 
 </Project>

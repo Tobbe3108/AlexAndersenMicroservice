@@ -27,7 +27,7 @@ namespace Order.Microservice.Services
 
         public async Task<Models.Order?> UpdateOrder(Models.Order? order)
         {
-            return await _sqlService.Update(order) is 0 ? null : order;
+            return await _sqlService.Update(order);
         }
     }
 }
